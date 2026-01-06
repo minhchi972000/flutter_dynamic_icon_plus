@@ -54,7 +54,7 @@ class FlutterDynamicIconPlusPlugin: FlutterPlugin, MethodCallHandler, ActivityAw
           Log.d("setAlternateIconName", "Saved app icon status: $saved")
 
           if(saved == true){
-            if(containsOnBlacklist(brandsInString, manufacturesInString, modelsInString)){
+            if(!containsOnBlacklist(brandsInString, manufacturesInString, modelsInString)){
               if(activity != null){
                 if(iconName != null){
                   ComponentUtil.changeAppIcon(
